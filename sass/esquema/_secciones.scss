@@ -1,0 +1,132 @@
+
+.seccion-equipamiento,  
+.seccion-marcas {
+    @extend %estiloSecciones;
+}
+
+
+.seccion-lugares{
+
+    @extend %estiloSecciones;
+
+    margin-top: 5rem;
+    .carousel-item img{
+        border-radius: 0.94rem;
+    }    
+
+} 
+
+
+.seccion-vestimenta{
+
+    @extend %estiloSecciones;
+
+    @include estructuraGrid ( repeat(2,1fr), 1.25rem, 1.25rem ); /* Va a servir para el resto de las secciones equipamiento, marcas */
+  
+    .titulo-1-1{
+        @extend %estiloTituloGaleria;
+    }
+
+    .galeria-1-1 ul{
+        @extend %estiloListaGaleria;
+    }
+
+
+    .titulo-1-2{
+        @extend %estiloTituloGaleria;
+      }
+
+    .galeria-1-2 ul{
+        @extend %estiloListaGaleria;
+      }
+
+    
+    .titulo-2-1{
+      @extend %estiloTituloGaleria;
+    }
+    
+    .galeria-2-1 ul{
+      @extend %estiloListaGaleria;
+    }
+    
+
+    .titulo-2-2{
+      @extend %estiloTituloGaleria;
+    }
+
+    .galeria-2-2 ul{
+      @extend %estiloListaGaleria;
+    }
+    
+}
+
+
+.seccion-contacto{
+
+    margin: 3rem auto;  
+
+    .datos-contacto{
+
+        input{
+            height: 2.2rem;
+            margin: 0.5rem;
+            padding-left: 0.6rem ;
+            padding-right: 0.6rem;
+            border-style: none;
+        }
+
+        .checkbox{
+            margin: 0.3rem;
+        }        
+
+        textarea{
+            border-radius: 5px;
+            height: 6.25rem;    
+            margin: 0.625rem;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            padding-top: 0.625rem;
+            border-style: none;            
+        }
+
+        .button{
+            color: $colorBtn;
+            font-size: 1.25rem;
+            font-weight: bold;
+            background-color: $verde-azulado;
+            width: 100%;
+            padding-top: 0.625rem;
+            height: 3.75rem;  
+        }        
+        
+       /* Agregado de MOVIMIENTO al boton del formulario  */  
+        @keyframes cambiar-color{
+            
+            0%{
+                @include efectosBotonFormulario($verde-azulado, 100%);
+            }
+        
+            33%{
+                @include efectosBotonFormulario($background, 50%);      
+            }
+
+            66%{
+                @include efectosBotonFormulario($rojo, 60%); 
+            }
+
+            100%{
+                @include efectosBotonFormulario($verde-azulado, 100%);
+            }
+
+        }
+        
+        .efectos:hover{
+            background: turquoise;
+            animation-name: cambiar-color;
+            animation-duration: 10s;
+            animation-iteration-count: 3;
+        }
+      
+    }
+
+}

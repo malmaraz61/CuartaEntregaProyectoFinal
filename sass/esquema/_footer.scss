@@ -1,0 +1,21 @@
+/*  FOOTER */
+
+
+/*
+.contenedor{
+  padding: 1rem 0;
+}
+*/
+.footer {
+    padding: 1.5rem 0;
+    background-color: $verde-azulado;
+
+    @include estructuraFlex(row, space-around,  flex-start);
+
+    li{
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      color: $negro;
+    }
+
+}
